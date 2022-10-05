@@ -72,21 +72,21 @@
     echo "Obwod prostokata o wymiarach {$bokA} i {$bokB} wynosi " . (($bokA) * 2 + ($bokB) * 2) . "<br>";
     echo "Pole prostokata o wymiarach {$bokA} i {$bokB} wynosi " . ($bokA * $bokB) . "<br>";
 
-    //funkcje
-    echo abs(-15) . "<br>";
-    echo min([0, 150, 30, 20, -8, -200]) . "<br>";
-    echo max([0, 150, 30, 20, -8, -200]) . "<br>";
-    echo pi() . "<br>";
-    echo round(3.4) . "<br>";
-    echo round(3.6) . "<br>";
-    echo round(5.045, 2) . "<br>";
-    echo round(5.055, 2) . "<br>";
-    echo rand(900, 1000) . "<br>";
-    echo sqrt(0) . "<br>";
-    echo sqrt(64) . "<br>";
-    echo sqrt(256) . "<br>";
-    echo sqrt(65536) . "<br>";
     ?>
+    <!-- funkcje -->
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja abs dla liczby -15: <?php echo abs(-15); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja min dla zestawu liczb 0, 150, 30, 20, -8, -200: <?php echo min([0, 150, 30, 20, -8, -200]); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja max dla zestawu liczb 0, 150, 30, 20, -8, -200: <?php echo max([0, 150, 30, 20, -8, -200]); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja pi: <?php echo pi(); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja round dla liczby 3.4: <?php echo round(3.4); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja round dla liczby 3.6: <?php echo round(3.6);; ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja round z dokładnością do 2 miejsc po przecinku dla liczby 5.045: <?php echo round(5.045, 2); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja round z dokładnością do 2 miejsc po przecinku dla liczby 5.055: <?php echo round(5.055, 2); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja rand dla przedziału liczb 900-1000: <?php echo rand(900, 1000); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja sqrt dla liczby 0: <?php echo sqrt(0); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja sqrt dla liczby 64: <?php echo sqrt(64); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja sqrt dla liczby 256: <?php echo sqrt(256); ?> <br></p>
+    <p style="color: aliceblue; background-color: darkblue; font-weight: bold;">funkcja sqrt dla liczby 65536: <?php echo sqrt(65536); ?> <br></p>
 </body>
 
 </html>
