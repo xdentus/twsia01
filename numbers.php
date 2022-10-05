@@ -71,6 +71,21 @@
     $bokB = 35;
     echo "Obwod prostokata o wymiarach {$bokA} i {$bokB} wynosi " . (($bokA) * 2 + ($bokB) * 2) . "<br>";
     echo "Pole prostokata o wymiarach {$bokA} i {$bokB} wynosi " . ($bokA * $bokB) . "<br>";
+
+    //funkcje
+    echo abs(-15) . "<br>";
+    echo min([0, 150, 30, 20, -8, -200]) . "<br>";
+    echo max([0, 150, 30, 20, -8, -200]) . "<br>";
+    echo pi() . "<br>";
+    echo round(3.4) . "<br>";
+    echo round(3.6) . "<br>";
+    echo round(5.045, 2) . "<br>";
+    echo round(5.055, 2) . "<br>";
+    echo rand(900, 1000) . "<br>";
+    echo sqrt(0) . "<br>";
+    echo sqrt(64) . "<br>";
+    echo sqrt(256) . "<br>";
+    echo sqrt(65536) . "<br>";
     ?>
 </body>
 
