@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="c-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>numbers | PHP</title>
 </head>
@@ -13,9 +13,8 @@
     //variables
     $a = 1;
     $b = 5;
-    $x = 1.5;
-    $y = 5.5;
-    $dodaj = "59.85" + 100;
+    $c = 1.5;
+    $d = 5.5;
 
     //ints
     echo "Zmienna a ma wartosc {$a} a funkcja is__int zwraca dla niej wynik ";
@@ -28,16 +27,17 @@
     echo var_dump(is_float($b)) . "<br>";
 
     //floats
-    echo "Zmienna x ma wartosc {$x} a funkcja is__int zwraca dla niej wynik ";
-    echo var_dump(is_int($x)) . "<br>";
-    echo "Zmienna x ma wartosc {$x} a funkcja is_float zwraca dla niej wynik ";
-    echo var_dump(is_float($x)) . "<br>";
-    echo "Zmienna y ma wartosc {$y} a funkcja is_int zwraca dla niej wynik ";
-    echo var_dump(is_int($y)) . "<br>";
-    echo "Zmienna y ma wartosc {$y} a funkcja is_float zwraca dla niej wynik ";
-    echo var_dump(is_float($y)) . "<br>";
+    echo "Zmienna c ma wartosc {$c} a funkcja is__int zwraca dla niej wynik ";
+    echo var_dump(is_int($c)) . "<br>";
+    echo "Zmienna c ma wartosc {$c} a funkcja is_float zwraca dla niej wynik ";
+    echo var_dump(is_float($c)) . "<br>";
+    echo "Zmienna y ma wartosc {$d} a funkcja is_int zwraca dla niej wynik ";
+    echo var_dump(is_int($d)) . "<br>";
+    echo "Zmienna y ma wartosc {$d} a funkcja is_float zwraca dla niej wynik ";
+    echo var_dump(is_float($d)) . "<br>";
 
     //dodaj
+    $dodaj = "59.85" + 100;
     echo "Zmienna dodaj ma wartosc {$dodaj} a funkcja is_numeric zwraca dla niej wynik ";
     echo var_dump(is_numeric($dodaj)) . "<br>";
 
@@ -56,6 +56,21 @@
     echo var_dump(PHP_FLOAT_DIG) . "<br>";
     echo "Stała PHP_FLOAT_EPSILON ma wartość ";
     echo var_dump(PHP_FLOAT_EPSILON) . "<br>";
+
+    //dzialania
+    $x = 5;
+    $y = 15;
+    echo "Wynik dodawania {$x} i {$y} wynosi " . ($x + $y) . "<br>";
+    echo "Wynik odejmowania {$x} i {$y} wynosi " . ($x - $y) . "<br>";
+    echo "Wynik mnozenia {$x} i {$y} wynosi " . ($x * $y) . "<br>";
+    echo "Wynik dzielenia {$x} i {$y} wynosi " . ($x / $y) . "<br>";
+    echo "Reszta z dzielenia liczb {$x} i {$y} wynosi " . ($x % $y) . "<br>";
+
+    //pole
+    $bokA = 4;
+    $bokB = 35;
+    echo "Obwod prostokata o wymiarach {$bokA} i {$bokB} wynosi " . (($bokA) * 2 + ($bokB) * 2) . "<br>";
+    echo "Pole prostokata o wymiarach {$bokA} i {$bokB} wynosi " . ($bokA * $bokB) . "<br>";
     ?>
 </body>
 
