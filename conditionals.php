@@ -9,6 +9,7 @@
 <body>
     <?php
     $losowa = rand(1, 30);
+    $miesiac = rand(1, 15);
     ?>
     <h2 style="text-align: center; color: darkorchid;"> <?php echo $losowa ?></h2>
     <?php if ($losowa >= 20) : ?>
@@ -27,12 +28,8 @@
         <h4 style="text-align: center; color: deeppink;">Trzecia dziesiątka</h4>
     <?php endif; ?>
 
-    <?php
-    $miesiac = rand(1, 15);
-    ?>
-
     <h1 style="border: 4px solid violet"> <?= $miesiac ?> </h1>
-    <h3 style="border-top: 2px dashed pink; border-bottom: 2px dashed pink; text-align: center; font-family: cursive">
+    <h3 style="border-top: 2px dashed pink; border-bottom: 2px dashed pink; text-align: center; font-family: cursive;">
         <?php
         switch ($miesiac) {
             case 1:
