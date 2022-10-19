@@ -10,6 +10,8 @@
     <?php
     $losowa = rand(1, 30);
     $miesiac = rand(1, 15);
+    $wiek = rand(0, 100);
+    $plusy = rand(0, 10);
     ?>
     <h2 style="text-align: center; color: darkorchid;"> <?php echo $losowa ?></h2>
     <?php if ($losowa >= 20) : ?>
@@ -58,6 +60,72 @@
         }
         ?>
     </h3>
+
+    <h1 style="border: 2px solid black">
+        <?php
+        echo "Mam " . $wiek . " lat";
+        ?>
+    </h1>
+    <h2 style="border: 2px dotted navy">
+        <?php
+        if ($wiek < 18) {
+            echo "Jeszcze nie możesz głosować";
+        } elseif ($wiek < 21) {
+            echo "Możesz tylko głosować";
+        } elseif ($wiek < 30) {
+            echo "Możesz głosować i kandydować do Sejmu";
+        } elseif ($wiek < 35) {
+            echo "Możesz głosować i kandydować do Sejmu i Senatu";
+        } elseif ($wiek >= 35) {
+            echo "Możesz głosować, kandydować do Sejmu i Senatu oraz na Prezydenta";
+        }
+        ?>
+    </h2>
+    <pre>
+        <?php
+        echo $plusy;
+
+        switch ($plusy) {
+            case 1:
+                echo "+";
+                break;
+            case 2:
+                echo "++";
+                break;
+            case 3:
+                echo "+++";
+                break;
+            case 4:
+                echo "++++";
+                break;
+            case 5:
+                echo "+++++";
+                break;
+            case 6:
+                echo "++++++";
+                break;
+            case 7:
+                echo "+++++++";
+                break;
+            case 8:
+                echo "++++++++";
+                break;
+            case 9:
+                echo "+++++++++";
+                break;
+            default:
+                echo "Wartość jest poza zakresem <0, 10>";
+                break;
+        }
+        // if ($plusy > 0 &&  $plusy < 10) {
+        //     for ($i = 0; $i < $plusy; $i++) {
+        //         echo "+";
+        //     }
+        // } else {
+        //     echo " Wartość jest poza zakresem <0, 10>";
+        // }
+        ?>
+    </pre>
 </body>
 
 </html>
