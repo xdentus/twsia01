@@ -6,13 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loops | PHP</title>
-    <style>
-        /* td {
-            background-color: lightgray;
-            border: 1px solid gray;
-            padding: 10px;
-        } */
-    </style>
 </head>
 
 <body>
