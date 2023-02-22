@@ -85,8 +85,8 @@
         echo "$film $film_value" . "<br>";
     }
     // asort
-    foreach ($asort_films as $afilm => $afilm_value) {
-    }
+    // foreach ($asort_films as $afilm => $afilm_value) {
+    // }
     // ksort
 
     // arsort

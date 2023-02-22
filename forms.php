@@ -134,6 +134,7 @@
             ?>
         </select>
     </form>
+    <hr>
 </body>
 
 </html>
