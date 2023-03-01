@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>forms2 | PHP</title>
     <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
         body {
             min-height: 100vh;
             display: flex;
@@ -26,6 +32,10 @@
         fieldset {
             width: 50vw;
             border: 2px solid black;
+        }
+
+        legend {
+            margin-left: 15px;
         }
 
         i {
