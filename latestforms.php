@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <form action="index.php" method="post">
+    <form action="latestforms.php" method="post">
         <fieldset style="border: 1px solid darkgreen; background-color: lightgreen">
             <legend style="border:1px solid darkgreen;background-color: lightgreen">Formularz z walidacją</legend>
             <?php
