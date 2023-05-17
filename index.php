@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>projekt z php</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="list">
+                <ul>
+                    <li><a href="?page=main">Strona Główna</a></li>
+                    <li><a href="?page=czytelnicy">Tabela Czytelnicy</a></li>
+                    <li><a href="?page=dzialy">Tabela Działy</a></li>
+                    <li><a href="?page=ksiazki">Tabela Książki</a></li>
+                    <li><a href="?page=pracownicy">Tabela Pracownicy</a></li>
+                    <li><a href="?page=stanowiska">Tabela Stanowiska</a></li>
+                    <li><a href="?page=wypozyczenia">Tabela Wypożyczenia</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <?php
+            if (isset($_GET['page'])) {
+                if (file_exists('PAGES/' . $_GET['page'] . '.php'))
+                    include('PAGES/' . $_GET['page'] . '.php');
+                else
+                    echo '<h2>TA STRONA NIE ISTNIEJE</h2>';
+            }
+            ?>
+        </div>
+    </div>
+</body>
+
+</html>
