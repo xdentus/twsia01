@@ -15,3 +15,4 @@ echo 'Host info: ' . $mysqliProceduralConection->host_info . '<br>';
 echo 'MySQLi stat: ' . mysqli_stat($mysqliProceduralConection) . '</p>';
 
 mysqli_close($mysqliProceduralConection);
+?>
