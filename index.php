@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/main.css">
     <title>projekt z php</title>
 </head>
 
@@ -15,6 +16,7 @@
             <div class="list">
                 <ul>
                     <li><a href="?page=main">Strona Główna</a></li>
+                    <li><a href="?page=test">Test połączenia</a></li>
                     <li><a href="?page=czytelnicy">Tabela Czytelnicy</a></li>
                     <li><a href="?page=dzialy">Tabela Działy</a></li>
                     <li><a href="?page=ksiazki">Tabela Książki</a></li>
@@ -31,6 +33,8 @@
                     include('PAGES/' . $_GET['page'] . '.php');
                 else
                     echo '<h2>TA STRONA NIE ISTNIEJE</h2>';
+            } else {
+                include 'pages/main.php';
             }
             ?>
         </div>
