@@ -1,18 +1,11 @@
 <?php
-$servername = "127.0.0.1";
-$username = "oziminai";
-$password = "password";
-$database = "oziminai";
 
-$mysqliProceduralConection = mysqli_connect($servername, $username, $password, $database);
-
-if (!$mysqliProceduralConection) {
+if (!$conn) {
     die("Próba połączenia z bazą danych zakończyła się niepowodzeniem. Błąd: "
         . mysqli_connect_error());
 }
 echo '<p>Połączono z bazą danych <b>' . $database . '</b> na serwerze <b>' . $servername . '</b><br>';
-echo 'Host info: ' . $mysqliProceduralConection->host_info . '<br>';
-echo 'MySQLi stat: ' . mysqli_stat($mysqliProceduralConection) . '</p>';
+echo 'Host info: ' . $conn->host_info . '<br>';
+echo 'MySQLi stat: ' . mysqli_stat($conn) . '</p>';
 
-mysqli_close($mysqliProceduralConection);
 ?>

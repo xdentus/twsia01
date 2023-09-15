@@ -3,14 +3,8 @@
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") // Zapisz dane z formularza do bazy [INSERT]
         {
-            // tu będzie zapytanie typu insert do bazy
-            $servername = "127.0.0.1";
-            $username = "oziminai";
-            $password = "password";
-            $database = "oziminai";
 
-            $conn = mysqli_connect($servername, $username, $password, $database);
-            $query = "INSERT INTO dzialy (Nazwa) VALUES( ". $_POST['nazwa'] ." )";
+            $query = "INSERT INTO `dzialy` (Nazwa) VALUES ('" . $_POST['nazwa'] . "')";
             echo $query;
 
             if (mysqli_query($conn, $query)) {
@@ -18,7 +12,7 @@
             } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($conn);
             }
-            $conn->close();
+
         } else {
         ?>
         <form action="?page=dzialy_dodaj"  method="POST">

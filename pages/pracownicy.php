@@ -2,12 +2,6 @@
         <h1>Tabela pracownicy</h1>
         <div class="table-wrapper">
             <?php
-            $servername = "127.0.0.1";
-            $username = "oziminai";
-            $password = "password";
-            $database = "oziminai";
-
-            $conn = mysqli_connect($servername, $username, $password, $database);
             $query = 'SELECT * FROM pracownicy 
                         INNER JOIN stanowiska ON stanowiska.Id_stanowisko = pracownicy.Id_stanowisko 
                         WHERE 1 

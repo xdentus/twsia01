@@ -11,6 +11,10 @@
 </head>
 
 <body>
+
+<?php
+    include './include/db_conn.php'
+?>
     <div class="main">
         <div class="sidebar">
             <div class="list">
@@ -36,6 +40,7 @@
             } else {
                 include 'pages/main.php';
             }
+            include './include/db_disconn.php'
             ?>
         </div>
     </div>
