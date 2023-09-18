@@ -4,7 +4,7 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") // Zapisz dane z formularza do bazy [INSERT]
         {
 
-            $query = "INSERT INTO `dzialy` (Nazwa) VALUES ('" . $_POST['nazwa'] . "')";
+            $query = "INSERT INTO `dzialy` (Nazwa) VALUES ('" . $_POST['Nazwa'] . "')";
             echo $query;
 
             if (mysqli_query($conn, $query)) {
@@ -22,8 +22,8 @@
                     <td><input type="text" name="id_dzial" id="id_dzial" disabled></td>
                 </tr>
                 <tr>
-                    <td><label for="nazwa">Nazwa</label></td>
-                    <td><input type="text" name="nazwa" id="nazwa"></td>
+                    <td><label for="Nazwa">Nazwa</label></td>
+                    <td><input type="text" name="Nazwa" id="Nazwa"></td>
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align:center"><input type="Submit" value="Zapisz" style="padding: 3px 10px"></td>

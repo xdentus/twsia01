@@ -1,39 +1,34 @@
 <div class="content-wrapper">
     <div class="table-wrapper">
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") // Zapisz dane z formularza do bazy [INSERT]
-        {
-//            SELECT * FROM dzialy WHERE id=$_GET['id']
-            $query = "UPDATE dzialy SET Nazwa = ('" . $_POST['nazwa'] . "') WHERE Nazwa = 99";
-            echo $query;
+<?php
 
-            if (mysqli_query($conn, $query)) {
-                echo "New record created successfully";
-            } else {
-                echo "Error: " . $query . "<br>" . mysqli_error($conn);
-            }
+$Id_dzial = $_GET['id'];
+$Nazwa = $_GET['Nazwa'];
 
-        } else {
-//            SELECT * FROM dzialy WHERE id=$_GET['id']
-            ?>
-            <form action="?page=dzialy_edycja"  method="POST">
-                <table>
-                    <tr>
-                        <td><label for="id_dzial">Id_dzial</label></td>
-                        <td><input type="text" name="id_dzial" id="id_dzial"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="nazwa">Nazwa</label></td>
-                        <td><input type="text" name="nazwa" id="nazwa"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="text-align:center"><input type="Submit" value="Zapisz" style="padding: 3px 10px"></td>
-                    </tr>
-                </table>
 
-            </form>
-            <?php
-        }
-        ?>
+if ($_SERVER["REQUEST_METHOD"] == "POST") // Zapisz dane z formularza do bazy [INSERT]
+{
+
+    $Nazwa = $_POST['Nazwa'];
+    $query = "UPDATE `dzialy` SET `Nazwa` = '" . $Nazwa . "' WHERE `dzialy`.`Id_dzial` = '$Id_dzial'";
+    $result = mysqli_query($conn, $query);
+
+    if ($result) {
+        echo "Poprawnie zedytowano rekord";
+        echo '<br><a href="?page=dzialy">Powrót</a>';
+    } else {
+        echo "Błąd edycji";
+    }
+
+} else {
+    echo '<form action="?page=dzialy_edycja&id=' . $Id_dzial . '&Nazwa=' . $Nazwa . '" method="post">
+            <table>
+                <tr><td><label for="Id_dzial">Id_dzial</label></td><td><input type="text" name="Id_dzial" value="' . $Id_dzial . '" disabled </td></tr>
+                <tr><td><label for="Nazwa">Nazwa</label></td><td><input type="text" name="Nazwa" id="Nazwa" value="' . $Nazwa . '"></td></tr>
+                <tr><td colspan="2" style="text-align: center"><button type="submit">Zmień</button></td></tr>
+            </table>
+        </form>';
+}
+?>
     </div>
 </div>

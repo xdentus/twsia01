@@ -5,7 +5,7 @@
             $query = 'SELECT * FROM pracownicy 
                         INNER JOIN stanowiska ON stanowiska.Id_stanowisko = pracownicy.Id_stanowisko 
                         WHERE 1 
-                        ORDER BY pracownicy.Id_pracownika;';
+                        ORDER BY pracownicy.Wynagrodzenie ASC;';
             $result = mysqli_query($conn, $query);
             if (mysqli_num_rows($result) > 0) {
                 echo '<p>Zawiera '. mysqli_num_rows($result) .' wierszy</p>';
